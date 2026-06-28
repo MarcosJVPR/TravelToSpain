@@ -1,26 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react';
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-dark/95 backdrop-blur-md border-b border-gold/10'
-          : 'bg-transparent'
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 backdrop-blur-md border-b border-gold/10">
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-gold font-display text-xl font-bold tracking-wider">IBERIA</span>
-          <span className="text-cream/60 font-body text-xs font-light tracking-[0.3em] uppercase mt-1">ELITE</span>
+          <span className="text-gold font-display text-xl font-bold tracking-wider">TRAVEL</span>
+          <span className="font-body text-xs font-light tracking-[0.3em] uppercase mt-1">TO SPAIN</span>
         </div>
 
         <div className="hidden md:flex items-center gap-10">
@@ -42,5 +28,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }

@@ -4,27 +4,27 @@ const CITIES = [
   {
     name: 'Granada',
     subtitle: 'La Alhambra te espera',
-    image: 'https://images.unsplash.com/photo-1555993539-1732b0258235?w=1920&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1669231334393-db4ae180be84?q=80&w=1600&auto=format&fit=crop',
   },
   {
     name: 'Sevilla',
     subtitle: 'El alma del sur',
-    image: 'https://images.unsplash.com/photo-1559311745-2b2e5b7c5a96?w=1920&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1559386081-325882507af7?q=80&w=1600&auto=format&fit=crop',
   },
   {
     name: 'Barcelona',
     subtitle: 'Arte y arquitectura sin límites',
-    image: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1920&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?q=80&w=1600&auto=format&fit=crop',
   },
   {
     name: 'Toledo',
     subtitle: 'Ciudad de las tres culturas',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600828312577-2d40fe16696b?q=80&w=1600&auto=format&fit=crop',
   },
   {
     name: 'Valencia',
     subtitle: 'Tradición y vanguardia',
-    image: 'https://images.unsplash.com/photo-1599894516690-9b8e7e4b3abb?w=1920&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1683624990592-ce90fed41038?q=80&w=1600&auto=format&fit=crop',
   },
 ]
 
@@ -73,7 +73,7 @@ export default function Hero() {
       <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
         <div className="max-w-3xl">
           <p className="text-gold/80 font-body text-xs tracking-[0.4em] uppercase mb-6">
-            Datos oficiales de Dataestur &nbsp;•&nbsp; Turismo de lujo en España
+            Datos oficiales de Dataestur &nbsp;•&nbsp; Turismo en España
           </p>
           <p className="text-cream/60 font-body text-lg mb-2">Descubre la majestuosidad de</p>
           <div className="flex items-baseline gap-0 mb-4">
