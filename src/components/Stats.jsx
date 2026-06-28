@@ -52,6 +52,7 @@ export default function Stats() {
         }
         const tendenciaData = Object.entries(porAno)
           .sort(([a], [b]) => a - b)
+          .filter(([año]) => Number(año) <= 2025)
           .slice(-10)
           .map(([año, total]) => ({ año: String(año), turistas: +(total / 1_000_000).toFixed(1) }))
         setTendencia(tendenciaData)
