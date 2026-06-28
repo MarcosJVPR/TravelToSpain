@@ -80,7 +80,7 @@ export default function Destinos() {
                 <img src={d.imagen} alt={d.nombre} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-darkcard via-darkcard/20 to-transparent" />
                 <div className="absolute top-4 left-4">
-                  <span className="text-gold/80 font-body text-xs tracking-wider uppercase bg-dark/60 backdrop-blur-sm px-3 py-1.5">
+                  <span className="text-gold/80 font-body font-semibold text-xs tracking-wider uppercase bg-dark/60 backdrop-blur-sm px-3 py-1.5">
                     {d.tag}
                   </span>
                 </div>
@@ -121,7 +121,7 @@ export default function Destinos() {
             <div className="p-8">
               <p className="text-cream/40 font-body text-xs tracking-widest uppercase mb-2">{selected.comunidad}</p>
               <h3 className="font-display text-4xl text-cream font-bold mb-6">{selected.nombre}</h3>
-              <p className="text-cream/70 font-body text-sm leading-relaxed">{selected.descripcion}</p>
+              <p className="text-cream/70 font-body font-semibold text-sm leading-relaxed">{selected.descripcion}</p>
             </div>
           </div>
         </div>

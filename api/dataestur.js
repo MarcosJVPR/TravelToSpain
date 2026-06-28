@@ -1,8 +1,8 @@
 import * as XLSX from "xlsx";
 
 const ENDPOINTS = {
-  turistas: "https://api.dataestur.es/FRONTUR_DL",
-  gasto: "https://api.dataestur.es/EGATUR_DL",
+  turistas: "https://www.dataestur.es/API-SEGITTUR-v2/FRONTUR_DL?Pa%C3%ADs%20de%20residencia=Todos&Tipo%20de%20visitante=Todos&CCAA%20de%20destino=Todos",
+  gasto: "https://www.dataestur.es/API-SEGITTUR-v2/EGATUR_DL?Pa%C3%ADs%20de%20residencia=Todos&Tipo%20de%20visitante=Todos&CCAA%20de%20destino=Todos",
 };
 
 export default async function handler(req, res) {
@@ -18,7 +18,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    const upstream = await fetch(url);
+    const upstream = await fetch(url, {
+      headers: { accept: "application/vnd.ms-excel" },
+    });
     if (!upstream.ok) {
       return res.status(502).json({ error: "Dataestur no respondió correctamente.", status: upstream.status });
     }
