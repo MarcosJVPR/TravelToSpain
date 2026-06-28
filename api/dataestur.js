@@ -1,8 +1,8 @@
 import * as XLSX from "xlsx";
 
 const ENDPOINTS = {
-  turistas: "https://www.dataestur.es/API/FRONTUR_DL",
-  gasto: "https://www.dataestur.es/API/EGATUR_DL",
+  turistas: "https://api.dataestur.es/FRONTUR_DL",
+  gasto: "https://api.dataestur.es/EGATUR_DL",
 };
 
 export default async function handler(req, res) {

@@ -4,27 +4,27 @@ const CITIES = [
   {
     name: 'Granada',
     subtitle: 'La Alhambra te espera',
-    image: 'https://images.unsplash.com/photo-1669231334393-db4ae180be84?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1669231334393-db4ae180be84?q=75&w=1200&auto=format&fit=crop',
   },
   {
     name: 'Sevilla',
     subtitle: 'El alma del sur',
-    image: 'https://images.unsplash.com/photo-1559386081-325882507af7?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1559386081-325882507af7?q=75&w=1200&auto=format&fit=crop',
   },
   {
     name: 'Barcelona',
     subtitle: 'Arte y arquitectura sin límites',
-    image: 'https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?q=75&w=1200&auto=format&fit=crop',
   },
   {
     name: 'Toledo',
     subtitle: 'Ciudad de las tres culturas',
-    image: 'https://images.unsplash.com/photo-1600828312577-2d40fe16696b?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600828312577-2d40fe16696b?q=75&w=1200&auto=format&fit=crop',
   },
   {
     name: 'Valencia',
     subtitle: 'Tradición y vanguardia',
-    image: 'https://images.unsplash.com/photo-1683624990592-ce90fed41038?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1683624990592-ce90fed41038?q=75&w=1200&auto=format&fit=crop',
   },
 ]
 
@@ -66,30 +66,31 @@ export default function Hero() {
     <section className="relative h-screen w-full overflow-hidden">
       <div className={`absolute inset-0 transition-opacity duration-700 ${fade ? 'opacity-100' : 'opacity-0'}`}>
         <img src={city.image} alt={city.name} className="w-full h-full object-cover hero-image" />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-dark/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/70 via-transparent to-transparent" />
       </div>
 
       <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
         <div className="max-w-3xl">
-          <p className="text-gold/80 font-body text-xs tracking-[0.4em] uppercase mb-6">
+          <p className="text-gold font-body text-xs tracking-[0.4em] uppercase mb-6 drop-shadow-lg">
             Datos oficiales de Dataestur &nbsp;•&nbsp; Turismo en España
           </p>
-          <p className="text-cream/60 font-body text-lg mb-2">Descubre la majestuosidad de</p>
+          <p className="text-cream font-body text-lg mb-2 drop-shadow-lg">Descubre la majestuosidad de</p>
           <div className="flex items-baseline gap-0 mb-4">
-            <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-black text-cream leading-none">
+            <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-black text-cream leading-none drop-shadow-lg">
               {displayedName}
             </h1>
             <span className="inline-block w-1 bg-gold ml-1" style={{ height: '0.85em', animation: 'blink 0.8s step-end infinite' }} />
           </div>
-          <p className={`text-cream/50 font-body text-lg mb-10 transition-opacity duration-500 ${isTyping ? 'opacity-0' : 'opacity-100'}`}>
+          <p className={`text-cream font-body text-lg mb-10 drop-shadow-md transition-opacity duration-500 ${isTyping ? 'opacity-0' : 'opacity-100'}`}>
             {city.subtitle}
           </p>
           <div className="flex items-center gap-6">
             <a href="#destinos" className="inline-flex items-center gap-3 bg-gold hover:bg-gold/90 text-dark font-body text-sm font-semibold tracking-widest uppercase px-8 py-4 transition-all duration-300 hover:gap-5">
               Explorar destinos <span>→</span>
             </a>
-            <a href="#estadísticas" className="text-cream/60 hover:text-cream font-body text-sm tracking-wide transition-colors border-b border-cream/20 hover:border-cream/60 pb-0.5">
+            <a href="#estadísticas" className="text-cream hover:text-gold font-body text-sm tracking-wide transition-colors border-b border-cream/40 hover:border-gold pb-0.5">
               Ver estadísticas
             </a>
           </div>
@@ -105,8 +106,8 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-        <span className="text-cream/30 font-body text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-cream/30 to-transparent" />
+        <span className="text-cream/60 font-body text-xs tracking-widest uppercase">Scroll</span>
+        <div className="w-px h-12 bg-gradient-to-b from-cream/40 to-transparent" />
       </div>
     </section>
   )
